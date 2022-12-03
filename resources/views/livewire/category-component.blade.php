@@ -5,7 +5,8 @@
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="/" class="link">首頁</a></li>
-                <li class="item-link"><span>全部商品</span></li>
+                <li class="item-link"><span>商品類別</span></li>
+                <li class="item-link"><span>{{$category_name}}</span></li>
             </ul>
         </div>
         <div class="row">
@@ -20,7 +21,7 @@
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title">全部商品</h1>
+                    <h1 class="shop-title">{{$category_name}}</h1>
 
                     <div class="wrap-right">
 

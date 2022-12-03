@@ -15,14 +15,9 @@
                     <div class="detail-media">
                         <div class="product-gallery">
                         <ul class="slides">
-
                             <li data-thumb="/assets/images/products/{{$product->image}}">
                                 <img src="/assets/images/products/{{$product->image}}" alt="{{$product->name}}" />
                             </li>
-
-                            
-
-                            
                         </ul>
                         </div>
                     </div>
@@ -56,7 +51,7 @@
                             </div>
                         </div>
                         <div class="wrap-butons">
-                            <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}}, '{{$product->name}}', {{$product->regular_price}})">Add to Cart</a>
+                            <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}}, '{{$product->name}}', {{$product->regular_price}})">加入購物車</a>
                             <div class="wrap-btn">
                                 <a href="#" class="btn btn-compare">Add Compare</a>
                                 <a href="#" class="btn btn-wishlist">Add Wishlist</a>

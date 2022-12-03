@@ -18,7 +18,7 @@ class CartComponent extends Component
     }
     public function destroy($rowId){
         Cart::remove($rowId);
-        session()->flash('success_message', 'Item has been removed');
+        session()->flash('success_message', '商品已被刪除！');
     }
     public function destroyAll(){
         Cart::destroy();

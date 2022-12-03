@@ -13,11 +13,11 @@
             <div class="wrap-iten-in-cart">
                 @if(Session::has("success_message"))
                     <div class="alert alert-success">
-                        <strong>Success</strong> {{Session::get('success_message')}}
+                        <strong>{{Session::get('success_message')}}</strong> 
                     </div>
                 @endif
                 @if(Cart::count() > 0)
-                <h3 class="box-title">Products Name</h3>
+                <h3 class="box-title">商品名稱</h3>
                 <ul class="products-cart">
                     @foreach(Cart::content() as $item)
                     <li class="pr-cart-item">
@@ -46,33 +46,33 @@
                     @endforeach
                 </ul>
                 @else
-                    <p>No item in Cart.</p>
+                    <p>購物車內沒有商品.</p>
                 @endif
             </div>
 
             <div class="summary">
                 <div class="order-summary">
-                    <h4 class="title-box">Order Summary</h4>
-                    <p class="summary-info"><span class="title">Subtotal</span><b class="index">${{Cart::subtotal()}}</b></p>
-                    <p class="summary-info"><span class="title">Tax</span><b class="index">${{Cart::tax()}}</b></p>
+                    <h4 class="title-box">訂單明細</h4>
+                    <p class="summary-info"><span class="title">小計</span><b class="index">${{Cart::subtotal()}}</b></p>
+                    <p class="summary-info"><span class="title">稅金</span><b class="index">${{Cart::tax()}}</b></p>
                     <p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-                    <p class="summary-info total-info "><span class="title">Total</span><b class="index">${{Cart::total()}}</b></p>
+                    <p class="summary-info total-info "><span class="title">總金額</span><b class="index">${{Cart::total()}}</b></p>
                 </div>
                 <div class="checkout-info">
                     <label class="checkbox-field">
-                        <input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>I have promo code</span>
+                        <input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>我有折扣碼</span>
                     </label>
-                    <a class="btn btn-checkout" href="checkout.html">Check out</a>
-                    <a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                    <a class="btn btn-checkout" href="checkout.html">結帳</a>
+                    <a class="link-to-shop" href="shop.html">繼續購物<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="update-clear">
-                    <a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">Clear Shopping Cart</a>
-                    <a class="btn btn-update" href="#">Update Shopping Cart</a>
+                    <a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">清空購物車</a>
+                    <a class="btn btn-update" href="#">更新購物車</a>
                 </div>
             </div>
 
             <div class="wrap-show-advance-info-box style-1 box-in-site">
-                <h3 class="title-box">Most Viewed Products</h3>
+                <h3 class="title-box">瀏覽更多商品</h3>
                 <div class="wrap-products">
                     <div class="products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"5"}}' >
 
