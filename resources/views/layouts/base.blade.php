@@ -74,11 +74,17 @@
                                                 <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                                 <ul class="submenu curency" >
                                                     <li class="menu-item" >
-                                                        <a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
+                                                        <a title="Dashboard" href="{{route('admin.dashboard')}}">管理員主頁</a>
+													</li>
+													<li class="menu-item">
+														<a title="Categories" href="{{route('admin.categories')}}">商品分類管理</a>
+													</li>
+													<li class="menu-item">
+														<a title="Products" href="{{route('admin.products')}}">商品管理</a>
 													</li>
 													<li class="menu-item">
 														<li class="menu-item">
-															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()">Logout</a>
+															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()">登出</a>
 														</li>
 														<form id="form-logout" action=" {{route('logout')}} " method="POST">
 															@csrf
@@ -91,10 +97,10 @@
                                                 <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                                 <ul class="submenu curency" >
                                                     <li class="menu-item" >
-                                                        <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+                                                        <a title="Dashboard" href="{{ route('user.dashboard') }}">會員首頁</a>
 													</li>
 													<li class="menu-item">
-														<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()">Logout</a>
+														<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()">登出</a>
 													</li>
 													<form id="form-logout" action=" {{route('logout')}} " method="POST">
 														@csrf
