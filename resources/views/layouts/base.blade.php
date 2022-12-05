@@ -83,6 +83,9 @@
 														<a title="Products" href="{{route('admin.products')}}">商品管理</a>
 													</li>
 													<li class="menu-item">
+														<a title="Manage Home Slider" href="{{route('admin.homeslider')}}">首頁輪播圖管理</a>
+													</li>
+													<li class="menu-item">
 														<li class="menu-item">
 															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()">登出</a>
 														</li>
@@ -122,7 +125,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="/assets/images/logo-top-1.png" alt="mercado"></a>
+							<a href="/" class="link-to-home"><img src="/assets/images/logo-top-1.png" alt="mercado"></a>
 						</div>
 
 						@livewire('header-search-component')
