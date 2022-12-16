@@ -33,6 +33,7 @@
                                     <th>商品名稱</th>
                                     <th>存貨</th>
                                     <th>價錢</th>
+                                    <th>促銷價</th>
                                     <th>分類</th>
                                     <th>時間</th>
                                     <th>操作</th>
@@ -46,6 +47,7 @@
                                         <td>{{$product->name}}</td>
                                         <td>{{$product->stock_status}}</td>
                                         <td>{{$product->regular_price}}</td>
+                                        <td>{{$product->sale_price}}</td>
                                         <td>{{$product->category->name}}</td>
                                         <td>{{$product->created_at}}</td>
                                         <td>
